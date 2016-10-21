@@ -11,12 +11,21 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            SimpleFactoryPattern.Sender mail = SimpleFactoryPattern.SenderFactory.ProduceMail();
+            //SimpleFactoryPattern.Sender mail = SimpleFactoryPattern.SenderFactory.ProduceMail();
+            //SimpleFactoryPattern.Sender sms=SimpleFactoryPattern.SenderFactory.ProduceSMS();
+            //mail.Send();
+            //sms.Send();
 
-            SimpleFactoryPattern.Sender sms=SimpleFactoryPattern.SenderFactory.ProduceSMS();
+            AbstractFactoryPattern.ProductA springA = new AbstractFactoryPattern.springFactoryC().createProductA();
+            ((AbstractFactoryPattern.SpringA)springA).setName("春天1");
+            ((AbstractFactoryPattern.SpringA)springA).getName();
 
-            mail.Send();
-            sms.Send();
+            AbstractFactoryPattern.ProductB springB = new AbstractFactoryPattern.springFactoryC().createProductB();
+            ((AbstractFactoryPattern.SpringB)springB).setName("春天2");
+            ((AbstractFactoryPattern.SpringB)springB).getName();
+
+
+
 
             Console.ReadLine();
 

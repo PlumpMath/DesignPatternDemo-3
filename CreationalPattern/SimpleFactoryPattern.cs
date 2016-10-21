@@ -8,7 +8,7 @@ namespace CreationalPattern
 {
     /*
     简单工厂模式
-    1 创建公共接口 2 初始化产品类基础接口 3 创建工厂类，实现创建产品功能
+    1 创建产品公共接口 2 创建产品类 3 创建工厂类，实现创建产品功能
     */
 
     public class SimpleFactoryPattern
