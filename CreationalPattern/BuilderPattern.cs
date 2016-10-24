@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace CreationalPattern
 {
     /*建造者模式
-    创建产品类，创建创建者父类
+    创建产品类，创建建造者类，创建导演类
+    导演类调用建造者，建造者建造产品，产品展现。
     */
     public class BuilderPattern
     {
@@ -20,7 +21,7 @@ namespace CreationalPattern
             Queue queue = new Queue();
 
             /// <summary>
-            /// 添加队列
+            /// 添加到队列
             /// </summary>
             /// <param name="str"></param>
             public void Add(string queue)
@@ -28,6 +29,9 @@ namespace CreationalPattern
                 this.queue.Enqueue(queue);
             }
 
+            /// <summary>
+            /// 展示
+            /// </summary>
             public void Show()
             {
                 foreach (var item in this.queue)
