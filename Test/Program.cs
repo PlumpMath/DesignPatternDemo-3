@@ -45,33 +45,41 @@ namespace Test
             ////产品展示
             //thin.Show();
 
-            Thread thread1 = new Thread(new ParameterizedThreadStart(ThreadDemo1));
-            Thread thread2 = new Thread(new ParameterizedThreadStart(ThreadDemo2));
-            thread1.IsBackground = true;
-            thread2.IsBackground = true;
-            thread1.Start("线程1");
-            thread2.Start("线程2");
-            Console.WriteLine("主线程执行结束");
+            ///单例模式
+            //Thread thread1 = new Thread(new ParameterizedThreadStart(ThreadDemo1));
+            //Thread thread2 = new Thread(new ParameterizedThreadStart(ThreadDemo2));
+            //thread1.IsBackground = true;
+            //thread2.IsBackground = true;
+            //thread1.Start("线程1");
+            //thread2.Start("线程2");
+            //Console.WriteLine("主线程执行结束");
+
+            ///实例化原型类
+            PrototypePattern.ConcretePrototypeCls prototype = new PrototypePattern.ConcretePrototypeCls();
+            ///克隆实例化原型类
+            PrototypePattern.ConcretePrototypeCls copy = (PrototypePattern.ConcretePrototypeCls)prototype.Clone();  
+
+
             Console.ReadLine();
 
         }
 
-        /// <summary>
-        /// 线程1调用方法
-        /// </summary>
-        public static  void ThreadDemo1(object str)
-        {
-            Console.WriteLine("执行了:" + str.ToString());
-            SingletonPattern single1 = SingletonPattern.GetInstance();
-        }
+        ///// <summary>
+        ///// 线程1调用方法
+        ///// </summary>
+        //public static  void ThreadDemo1(object str)
+        //{
+        //    Console.WriteLine("执行了:" + str.ToString());
+        //    SingletonPattern single1 = SingletonPattern.GetInstance();
+        //}
 
-        /// <summary>
-        /// 线程2调用方法
-        /// </summary>
-        public static void ThreadDemo2(object str)
-        {
-            Console.WriteLine("执行了:" + str.ToString());
-            SingletonPattern single2 = SingletonPattern.GetInstance();
-        }
+        ///// <summary>
+        ///// 线程2调用方法
+        ///// </summary>
+        //public static void ThreadDemo2(object str)
+        //{
+        //    Console.WriteLine("执行了:" + str.ToString());
+        //    SingletonPattern single2 = SingletonPattern.GetInstance();
+        //}
     }
 }
