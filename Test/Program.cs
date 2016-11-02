@@ -54,10 +54,27 @@ namespace Test
             //thread2.Start("线程2");
             //Console.WriteLine("主线程执行结束");
 
-            ///实例化原型类
-            PrototypePattern.ConcretePrototypeCls prototype = new PrototypePattern.ConcretePrototypeCls();
-            ///克隆实例化原型类
-            PrototypePattern.ConcretePrototypeCls copy = (PrototypePattern.ConcretePrototypeCls)prototype.Clone();  
+            ///原型模式
+            ////实例化原型类
+            //PrototypePattern.ConcretePrototypeCls prototype = new PrototypePattern.ConcretePrototypeCls();
+            /////克隆实例化原型类
+            //PrototypePattern.ConcretePrototypeCls copy = (PrototypePattern.ConcretePrototypeCls)prototype.Clone();  
+
+            ///组合模式
+            CompositePattern.Line line = new CompositePattern.Line("直线");
+            CompositePattern.Circle circle = new CompositePattern.Circle("圆");
+            CompositePattern.ComplexGraphics complexGraphics = new CompositePattern.ComplexGraphics("十字圆");
+
+            complexGraphics.Add(line);
+            complexGraphics.Add(line);
+            complexGraphics.Add(circle);
+            Console.WriteLine("我准备画十字圆：");
+            complexGraphics.Draw();
+
+            Console.WriteLine("我准备画十字：");
+            complexGraphics.Remove(circle);
+            complexGraphics.Draw();
+
 
 
             Console.ReadLine();

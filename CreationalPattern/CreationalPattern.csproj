@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactoryPattern.cs" />
     <Compile Include="BuilderPattern.cs" />
+    <Compile Include="CompositePattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PrototypePattern.cs" />
     <Compile Include="SimpleFactoryPattern.cs" />
